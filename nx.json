@@ -7,5 +7,39 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "myapp": {
+      "tags": []
+    },
+    "myapp-e2e": {
+      "tags": []
+    },
+    "myapp1": {
+      "tags": []
+    },
+    "myapp1-e2e": {
+      "tags": []
+    },
+    "nornal-ap": {
+      "tags": []
+    },
+    "nornal-ap-e2e": {
+      "tags": []
+    },
+    "first-lib": {
+      "tags": []
+    },
+    "school-ui": {
+      "tags": []
+    },
+    "pagination": {
+      "tags": []
+    },
+    "pagination-tags": {
+      "tags": []
+    },
+    "pagination-filters": {
+      "tags": []
+    }
+  }
 }

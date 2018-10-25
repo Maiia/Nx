@@ -16,6 +16,21 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@NXworkspace/first-lib": [
+        "libs/first-lib/src/index.ts"
+      ],
+      "@NXworkspace/school-ui": [
+        "libs/school-ui/src/index.ts"
+      ],
+      "@NXworkspace/pagination": [
+        "libs/pagination/src/index.ts"
+      ],
+      "@NXworkspace/pagination-tags": [
+        "libs/pagination-tags/src/index.ts"
+      ],
+      "@NXworkspace/pagination-filters": [
+        "libs/pagination-filters/src/index.ts"
+      ]
     }
   },
   "exclude": [

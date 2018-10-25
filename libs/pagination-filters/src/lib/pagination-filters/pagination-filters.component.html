@@ -1,0 +1,16 @@
+<ul class="tags">
+  <li
+    *ngFor="let item of tags"
+    [ngClass]="{'active': tagsArr.indexOf(item) > -1}"
+  ><span (click)="onTagClick($event)">{{ item }}</span></li>
+</ul>
+
+<div class="ani" [@moveUp]="animationState">
+    <div #viewcontainer></div>
+</div>
+
+<NXworkspace-pagination
+  [itemsArr]="itemsTagged"
+  [itemsLength]="amountPerPage"
+  (itemsArrPaginated)="getBlogArrPaginated($event)"
+></NXworkspace-pagination>

@@ -1,0 +1,26 @@
+/*TAGS*/
+.tags {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.tags li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  min-height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.tags li:hover {
+  background: rgba(0, 0, 0, .1);
+}
+
+.active {
+  background: rgba(0, 0, 0, .1);
+}
