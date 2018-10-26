@@ -28,8 +28,10 @@ in component.html file add code:
   [filterName]="'filtername'">
 </NXworkspace-pagination-filters>
 ```
-where `\<component-from-the-project\>\</component-from-the-project\>` is a dump component from the project itself, which will be used in PaginationFiltersModule inside *ngFor to display paginated items.
+where `<component-from-the-project></component-from-the-project>` is a dump component from the project itself, which will be used in PaginationFiltersModule inside *ngFor to display paginated items.
+
  `[currentItem]` - input in component-from-the-project component with current paginated filtered item.
+ 
  `itemsArrAll` - array of object items for pagination and filtering, like this:
  ```
      itemsArrAll = [
@@ -41,4 +43,5 @@ where `\<component-from-the-project\>\</component-from-the-project\>` is a dump 
      ]
  ```
  `[amountPerPage]` - amount of items per page.
+ 
  `[filterName]` - name of key of object itemsArrAll for filtering, f.e."'tags'"
