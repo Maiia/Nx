@@ -6,7 +6,7 @@ npm i pagination-filters
 ```
 ### Usage in code
 
-add PaginationFiltersModule in the imports section of app.module.ts
+add PaginationFiltersModule in the imports section of project module
 ```
 @NgModule({
   declarations: [AppComponent],
