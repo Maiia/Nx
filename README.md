@@ -1,4 +1,4 @@
-# Pagination-filtaring npm module usage
+# Pagination-filtaring npm module for Angular usage
 
 ### Installation
 ```
