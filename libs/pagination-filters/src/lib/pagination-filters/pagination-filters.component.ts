@@ -26,7 +26,7 @@ import {trigger, animate, style, transition, keyframes} from '@angular/animation
 })
 
 export class PaginationFiltersComponent implements OnInit {
-  @Input() pagTagsItems: Array<Object>;
+  @Input() pagFilterItems: Array<Object>;
   @Input() filterName: string;
   @Input() amountPerPage: number;
 
@@ -50,14 +50,14 @@ export class PaginationFiltersComponent implements OnInit {
   ngOnInit() {
     this.itemsTagged = [{}];
 
-    this.pagTagsItems.forEach((item) => {
+    this.pagFilterItems.forEach((item) => {
       this.createEl(item);
     });
 
-    Object.assign(this.itemsTagged, this.pagTagsItems);
+    Object.assign(this.itemsTagged, this.pagFilterItems);
 
     const tagsSet = new Set;
-    this.pagTagsItems.forEach(item =>
+    this.pagFilterItems.forEach(item =>
       item['tags'].forEach(itemInside =>
         tagsSet.add(itemInside)
     ));
@@ -74,12 +74,12 @@ export class PaginationFiltersComponent implements OnInit {
   }
 
   getBlogArrPaginated(arr) {
-    this.pagTagsItems.forEach((item, index) => {
+    this.pagFilterItems.forEach((item, index) => {
       this.removeEl(index);
     });
     this.itemsPaginated = arr;
 
-    this.itemsPaginated.forEach((item, index) => {
+    this.itemsPaginated.forEach((item) => {
       this.createEl(item);
     });
 
@@ -95,13 +95,13 @@ export class PaginationFiltersComponent implements OnInit {
     }
 
     if(this.tagsArr.length === 0) {
-      this.itemsTagged = this.pagTagsItems;
+      this.itemsTagged = this.pagFilterItems;
       return;
     }
 
     const arr = [];
     this.tagsArr.forEach((tag: string) => {
-      arr.push(...this.pagTagsItems.filter((item: any) => {
+      arr.push(...this.pagFilterItems.filter((item: any) => {
           return item['tags'].indexOf(tag) > -1;
         })
       );
